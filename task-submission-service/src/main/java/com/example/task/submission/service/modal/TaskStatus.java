@@ -1,4 +1,4 @@
-package com.example.task.service.modal;
+package com.example.task.submission.service.modal;
 
 public enum TaskStatus {
 

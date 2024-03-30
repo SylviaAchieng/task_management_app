@@ -7,6 +7,7 @@ import java.util.List;
 
 public interface SubmissionRepository extends JpaRepository<Submission, Long> {
 
-    List<Submission> findByTaskId(Long taskId)
+    List<Submission> findByTaskId(Long taskId);
+
 }
 
