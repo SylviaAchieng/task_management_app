@@ -4,6 +4,36 @@ server:
 spring:
   application:
     name: GATEWAY-SERVICE
+  cloud:
+    gateway:
+      mvc:
+        routes:
+          - id: USER-SERVICE
+            uri:
+              lb://USER-SERVICE
+            predicates:
+              - path=/auth/**, /users/**, /api/users/**, /
+
+          - id: TASK-SERVICE
+            uri:
+              lb://TASK-SERVICE
+            predicates:
+              - path=/api/tasks/**, /tasks/**
+
+          - id: SUBMISSION-SERVICE
+            uri:
+              lb://SUBMISSION-SERVICE
+            predicates:
+              - path=/api/submissions/**, /submissions/**
+
+        default-filters:
+          - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        globalcors:
+          cors-configurations:
+            '[/**]':
+              allowedOrigins: "*"
+              allowedMethods: "*"
+              allowedHeaders: "*"
 
 
 
