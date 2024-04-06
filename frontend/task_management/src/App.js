@@ -1,10 +1,13 @@
+import { ThemeProvider } from "@mui/material";
+import { darkTheme } from "./theme/darktheme";
 
 
 function App() {
   return (
-    <div className="">
-      
-    </div>
+    <ThemeProvider theme={darkTheme}>
+      task manager
+
+    </ThemeProvider>
   );
 }
 
