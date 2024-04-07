@@ -1,11 +1,13 @@
 import { ThemeProvider } from "@mui/material";
 import { darkTheme } from "./theme/darktheme";
+import Navbar from "./Page/Navbar/Navbar";
 
 
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
-      task manager
+      
+      <Navbar/>
 
     </ThemeProvider>
   );
