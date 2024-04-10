@@ -1,6 +1,7 @@
 import { ThemeProvider } from "@mui/material";
 import { darkTheme } from "./theme/darktheme";
 import Navbar from "./Page/Navbar/Navbar";
+import Home from "./Page/Home/Home";
 
 
 function App() {
@@ -8,6 +9,7 @@ function App() {
     <ThemeProvider theme={darkTheme}>
       
       <Navbar/>
+      <Home/>
 
     </ThemeProvider>
   );
