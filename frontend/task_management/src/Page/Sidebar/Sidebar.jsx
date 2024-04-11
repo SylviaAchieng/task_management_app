@@ -31,7 +31,7 @@ export default function Sidebar() {
 
         {
           menu.filter((item)=>item.role.includes(role))
-          .map((item)=><p className={`py-3 px-5 rounded-full text-center cursor-pointer`}>
+          .map((item)=><p className={`py-3 px-5 rounded-full text-center cursor-pointer ${activeMenu===item.name?"activeMenuItem":"menuItem"}`}>
             {item.name}
           </p>)
         }
