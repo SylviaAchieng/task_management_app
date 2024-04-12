@@ -1,5 +1,6 @@
 import React from 'react'
 import Sidebar from '../Sidebar/Sidebar'
+import TaskList from '../TaskList/TaskList'
 
 export default function Home() {
   return (
@@ -7,7 +8,10 @@ export default function Home() {
       <div className='hidden lg:block w-[25vw] relative'>
         <Sidebar/>
       </div>
-      <div className='right-side-part'></div>
+      <div className='right-side-part w-full flex justify-center mb-10'>
+        <TaskList/>
+
+      </div>
     </div>
   )
 }

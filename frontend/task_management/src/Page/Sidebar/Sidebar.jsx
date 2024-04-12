@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import {Avatar} from '@mui/material'
+import {Avatar, Button} from '@mui/material'
 import './Sidebar.css'
 
 
@@ -19,6 +19,14 @@ export default function Sidebar() {
 
   const [activeMenu, setActiveMenu]=useState("Home")
 
+  const handleMenuChange=(item)=>{
+    setActiveMenu(item.name)
+  }
+
+  const handleLogout=()=>{
+    console.log("handle logout")
+  }
+
   return (
     <div className=' card min-h-[85vh] flex flex-col justify-center fixed w-[20vw]'>
       <div className='space-y-5 h-full'>
@@ -31,10 +39,13 @@ export default function Sidebar() {
 
         {
           menu.filter((item)=>item.role.includes(role))
-          .map((item)=><p className={`py-3 px-5 rounded-full text-center cursor-pointer ${activeMenu===item.name?"activeMenuItem":"menuItem"}`}>
+          .map((item)=><p onClick={()=>handleMenuChange(item)} className={`py-3 px-5 rounded-full text-center cursor-pointer 
+          ${activeMenu===item.name?"activeMenuItem":"menuItem"}`}>
             {item.name}
           </p>)
         }
+
+        <Button onClick={handleLogout} sx={{padding:".7rem",borderRadius:"2rem"}} fullWidth className='logoutButton'>logout</Button>
 
 
       </div>

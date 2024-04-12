@@ -15,6 +15,13 @@ body {
   width: 100vw !important;
 }
 
+.card{
+  background-color: #0c071b;
+  box-shadow: rgba(215, 106, 255, 0.507) 0px 0px 20px;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
