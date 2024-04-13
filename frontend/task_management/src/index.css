@@ -26,3 +26,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.techStack{
+  color: #c24dd0;
+  border: 2px solid #c24dd0;
+  padding: 0.5rem 2rem;
+  
+}
