@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {IconButton} from '@mui/material'
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import UserList from '../UserList';
 
 
 const role ="ROLE_ADMIN"
@@ -18,19 +19,18 @@ export default function TaskCard() {
     setAnchorEl(null);
   };
 
+  const [openUserList, setOpenUserList] = useState(false);
+  const handleCloseUserList=()=>{
+    setOpenUserList(false)
+  }
   const handleOpenUserList=()=>{
+    setOpenUserList(true);
+    handleMenuClose();
+  };
+  const handleOpenSubmissionList=()=>{};
+  const handleOpenUpdateTaskModel=()=>{};
+  const handleDeleteTask=()=>{};
 
-  }
-
-  const handleOpenSubmissionList=()=>{
-    
-  }
-  const handleOpenUpdateTaskModel=()=>{
-    
-  }
-  const handleDeleteTask=()=>{
-    
-  }
 
 
   return (
@@ -91,6 +91,7 @@ export default function TaskCard() {
         </div>
 
       </div>
+      <UserList open={openUserList} handleClose={handleCloseUserList}/>
     </div>
-  )
-}
+  );
+};
