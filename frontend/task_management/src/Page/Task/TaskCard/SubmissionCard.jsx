@@ -14,9 +14,14 @@ export default function SubmissionCard() {
         </div>
         <div className='flex items-center gap-2 text-xs'>
             <p>Submission Time:</p>
+            <p className='text-gray-400'> 2024-01-18T22:15:39.517343</p>
 
         </div>
-
+      </div>
+      <div>
+        {
+          
+        }
       </div>
     </div>
   )
