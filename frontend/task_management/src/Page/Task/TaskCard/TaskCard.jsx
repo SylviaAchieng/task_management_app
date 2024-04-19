@@ -5,6 +5,7 @@ import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import UserList from '../UserList';
 import SubmissionList from './SubmissionList';
+import EditTaskCard from './EditTaskCard';
 
 
 const role ="ROLE_ADMIN"
@@ -22,7 +23,7 @@ export default function TaskCard() {
 
   const [openUserList, setOpenUserList] = useState(false);
   const handleCloseUserList=()=>{
-    setOpenUserList(false)
+    setOpenUserList(false);
   }
   const handleOpenUserList=()=>{
     setOpenUserList(true);
@@ -31,11 +32,25 @@ export default function TaskCard() {
 
   const [openSubmissionList, setOpenSubmissionList] = useState(false);
   const handleCloseSubmissionList=()=>{
-    setOpenSubmissionList(false)
+    setOpenSubmissionList(false);
   }
-  const handleOpenSubmissionList=()=>{};
-  const handleOpenUpdateTaskModel=()=>{};
-  const handleDeleteTask=()=>{};
+  const handleOpenSubmissionList=()=>{
+    setOpenSubmissionList(true);
+    handleMenuClose();
+  };
+
+  const [openUpdateTaskForm, setOpenUpdateTaskForm] = useState(false);
+  const handleCloseUpdateTaskForm=()=>{
+    setOpenUpdateTaskForm(false);
+  }
+  const handleOpenUpdateTaskModel=()=>{
+    setOpenUpdateTaskForm(true);
+    handleMenuClose();
+  };
+
+  const handleDeleteTask=()=>{
+    handleMenuClose();
+  };
 
 
 
@@ -99,6 +114,7 @@ export default function TaskCard() {
       </div>
       <UserList open={openUserList} handleClose={handleCloseUserList}/>
       <SubmissionList open={openSubmissionList} handleClose={handleCloseSubmissionList}/>
+      <EditTaskCard open={openUpdateTaskForm} handleClose={handleCloseUpdateTaskForm}/>
     </div>
   );
 };

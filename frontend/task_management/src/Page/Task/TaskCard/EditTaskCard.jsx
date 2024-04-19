@@ -16,7 +16,7 @@ const style = {
   p: 4,
 };
 
-export default function SubmissionList({handleClose, open}) {
+export default function EditTaskCard({handleClose, open}) {
 
 
   return (
@@ -29,7 +29,7 @@ export default function SubmissionList({handleClose, open}) {
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
-            Submission List
+            Edit Task Form
           </Typography>
         </Box>
       </Modal>

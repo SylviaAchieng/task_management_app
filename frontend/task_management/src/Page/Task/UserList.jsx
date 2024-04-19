@@ -3,6 +3,7 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { Avatar, ListItem, ListItemAvatar, ListItemText } from '@mui/material';
 
 const style = {
   position: 'absolute',
@@ -28,12 +29,26 @@ export default function UserList({handleClose, open}) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Text in a modal
-          </Typography>
-          <Typography id="modal-modal-description" sx={{ mt: 2 }}>
-            Duis mollis, est non commodo luctus, nisi erat porttitor ligula.
-          </Typography>
+          
+          {
+            [1,1,1].map((item)=><div className='flex items-center justify-between w-full'>
+              <div>
+                <ListItem>
+                  <ListItemAvatar>
+                    <Avatar src='https://yt3.googleusercontent.com/ytc/AIdro_l5B0RFDAaRdg6t7d-Z9wY1AivF86w1HmzAA-2myLSCuH0=s176-c-k-c0x00ffffff-no-rj'/>
+                  </ListItemAvatar>
+                  <ListItemText
+                  secondary="@usercodes"
+                  primary={"Cool Coding"}/>
+                </ListItem>
+              </div>
+              <div>
+                <Button className='customeButton'>select</Button>
+              </div>
+
+            </div>)
+          }
+
         </Box>
       </Modal>
     </div>
