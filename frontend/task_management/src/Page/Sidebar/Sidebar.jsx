@@ -34,7 +34,7 @@ export default function Sidebar() {
             <Avatar
             sx={{width:"8rem", height:"8rem"}}
             className='border-2 border-[#c24dd0]' 
-            src='https://pngtree.com/freepng/business-logo-design-free-logo-design-template_915991.html'/>
+            src='https://cdn-icons-png.flaticon.com/128/3302/3302576.png'/>
         </div>
 
         {

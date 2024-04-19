@@ -10,7 +10,7 @@ const Navbar = () => {
       
         <div className='flex items-center gap-5'>
             <p>taskmanager</p>
-            <Avatar sx={{backgroundColor:"#c24dd0"}} className='bg-[#c24dd0]'>T</Avatar>
+            <Avatar sx={{backgroundColor:"#c24dd0"}} className='bg-[#c24dd0]' src='https://yt3.googleusercontent.com/ytc/AIdro_l5B0RFDAaRdg6t7d-Z9wY1AivF86w1HmzAA-2myLSCuH0=s176-c-k-c0x00ffffff-no-rj'/>
         </div>
     </div>
   )
