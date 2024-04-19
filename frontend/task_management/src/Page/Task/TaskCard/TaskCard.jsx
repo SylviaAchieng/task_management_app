@@ -4,6 +4,7 @@ import MoreVertIcon from '@mui/icons-material/MoreVert';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 import UserList from '../UserList';
+import SubmissionList from './SubmissionList';
 
 
 const role ="ROLE_ADMIN"
@@ -27,6 +28,11 @@ export default function TaskCard() {
     setOpenUserList(true);
     handleMenuClose();
   };
+
+  const [openSubmissionList, setOpenSubmissionList] = useState(false);
+  const handleCloseSubmissionList=()=>{
+    setOpenSubmissionList(false)
+  }
   const handleOpenSubmissionList=()=>{};
   const handleOpenUpdateTaskModel=()=>{};
   const handleDeleteTask=()=>{};
@@ -92,6 +98,7 @@ export default function TaskCard() {
 
       </div>
       <UserList open={openUserList} handleClose={handleCloseUserList}/>
+      <SubmissionList open={openSubmissionList} handleClose={handleCloseSubmissionList}/>
     </div>
   );
 };
