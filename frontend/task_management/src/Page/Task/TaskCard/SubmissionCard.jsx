@@ -1,5 +1,6 @@
 import React from 'react'
 import OpenInNewIcon from '@mui/icons-material/OpenInNew';
+import { Button } from '@mui/material';
 
 export default function SubmissionCard() {
   return (
@@ -20,7 +21,9 @@ export default function SubmissionCard() {
       </div>
       <div>
         {
-          
+          false?<div></div>:<Button color={true?"success":"error"} size='small' variant='outlined'>
+            Accepted
+          </Button>
         }
       </div>
     </div>
