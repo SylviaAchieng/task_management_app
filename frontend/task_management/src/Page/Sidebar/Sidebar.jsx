@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import {Avatar, Button} from '@mui/material'
 import './Sidebar.css'
+import CreateTask from '../Task/CreateTask'
 
 
 const menu=[
@@ -20,6 +21,10 @@ export default function Sidebar() {
   const [activeMenu, setActiveMenu]=useState("Home")
 
   const handleMenuChange=(item)=>{
+
+    if(item.name=="Create New Task"){
+      
+    }
     setActiveMenu(item.name)
   }
 
@@ -28,6 +33,7 @@ export default function Sidebar() {
   }
 
   return (
+    <>
     <div className=' card min-h-[85vh] flex flex-col justify-center fixed w-[20vw]'>
       <div className='space-y-5 h-full'>
         <div className='flex justify-center'>
@@ -50,5 +56,7 @@ export default function Sidebar() {
 
       </div>
     </div>
+    <CreateTask/>
+    </>
   )
 }
