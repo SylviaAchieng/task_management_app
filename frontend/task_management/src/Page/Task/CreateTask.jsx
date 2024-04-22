@@ -18,7 +18,6 @@ const style = {
 
 export default function CreateTask({handleClose, open}) {
 
-
   return (
     <div>
       <Modal

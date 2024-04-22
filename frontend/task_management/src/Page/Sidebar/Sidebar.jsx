@@ -20,6 +20,15 @@ export default function Sidebar() {
 
   const [activeMenu, setActiveMenu]=useState("Home")
 
+  const [openCreateTaskForm, setOpenCreateTaskForm] =useState(false);
+      const handleCloseCreateTaskForm=()=>{
+        setOpenCreateTaskForm(false);
+  }
+      const handleOpenCreateTaskModel=()=>{
+        setOpenCreateTaskForm(true);
+    
+  };
+
   const handleMenuChange=(item)=>{
 
     if(item.name=="Create New Task"){
