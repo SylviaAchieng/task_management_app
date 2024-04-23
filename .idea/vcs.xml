@@ -11,9 +11,8 @@
     <mapping directory="$PROJECT_DIR$/../littlelemon_foodordering_app" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../movieapp" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../react-form/feedback_form" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../task managemet app" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/../task managemet app/task managemet backend" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../task managemet backend" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/frontend/task_management" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../tech2giveTest" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/../webpage" vcs="Git" />
   </component>
