@@ -3,6 +3,8 @@ import Box from '@mui/material/Box';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Modal from '@mui/material/Modal';
+import { Grid, TextField } from '@mui/material';
+import { useState } from 'react';
 
 const style = {
   position: 'absolute',
@@ -18,6 +20,25 @@ const style = {
 
 export default function CreateTask({handleClose, open}) {
 
+  const [formData, setFormData]=useState({
+    title:"",
+    image:"",
+    description:"",
+    tage:[],
+    deadline: new Date(),
+  })
+
+  const handleChange=(e)=>{
+    const {name, value}=e.target;
+    setFormData({
+      ...formData,
+      [name]:value,
+    });
+
+  };
+
+  
+
   return (
     <div>
       <Modal
@@ -27,9 +48,19 @@ export default function CreateTask({handleClose, open}) {
         aria-describedby="modal-modal-description"
       >
         <Box sx={style}>
-          <Typography id="modal-modal-title" variant="h6" component="h2">
-            Edit Task Form
-          </Typography>
+          <form>
+            <Grid container spacing={2} alignItems='center'>
+              <Grid item xs={12}>
+                <TextField
+                label='Title'
+                fullWidth
+                name='title'
+                value={formData.title}
+                onChange={handleChange}
+                />
+              </Grid>
+            </Grid>
+          </form>
         </Box>
       </Modal>
     </div>

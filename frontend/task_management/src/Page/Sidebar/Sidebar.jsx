@@ -32,7 +32,7 @@ export default function Sidebar() {
   const handleMenuChange=(item)=>{
 
     if(item.name=="Create New Task"){
-      
+      handleOpenCreateTaskModel()
     }
     setActiveMenu(item.name)
   }
@@ -65,7 +65,7 @@ export default function Sidebar() {
 
       </div>
     </div>
-    <CreateTask/>
+    <CreateTask open={openCreateTaskForm} handleClose={handleCloseCreateTaskForm}/>
     </>
   )
 }
