@@ -29,7 +29,7 @@ export default function CreateTask({handleClose, open}) {
     title:"",
     image:"",
     description:"",
-    tage:[],
+    tags:[],
     deadline: new Date(),
   })
 
@@ -89,6 +89,7 @@ export default function CreateTask({handleClose, open}) {
     e.preventDefault();
     const {deadline}=formData;
     formData.deadline=formatDate(deadline);
+    formData.tags=selectedTags
     console.log("formData", formData, "deadline: ", formData.deadline)
     handleClose()
 
