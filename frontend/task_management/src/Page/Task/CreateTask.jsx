@@ -57,10 +57,39 @@ export default function CreateTask({handleClose, open}) {
 
   }
 
+  const formatDate=(input)=>{
+    let{
+      $y: year,
+      $M: month,
+      $D: day,
+      $H: hours,
+      $m: minutes,
+      $s: seconds,
+      $ms: milliseconds,
+    } = input;
+
+    month = month + 1;
+
+    const date = new Date(
+      year,
+      month,
+      day,
+      hours,
+      minutes,
+      seconds,
+      milliseconds
+    );
+
+    const formatedDate=date.toISOString();
+
+    return formatedDate;
+  }
+
   const handleSubmit=(e)=>{
     e.preventDefault();
     const {deadline}=formData;
-    console.log("formData", formData, "deadline: ", deadline)
+    formData.deadline=formatDate(deadline);
+    console.log("formData", formData, "deadline: ", formData.deadline)
     handleClose()
 
 
