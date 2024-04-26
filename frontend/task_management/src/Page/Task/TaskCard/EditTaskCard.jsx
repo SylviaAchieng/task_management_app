@@ -8,6 +8,7 @@ import { useState } from 'react';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
 import { DateTimePicker } from '@mui/x-date-pickers/DateTimePicker';
+import { useEffect } from 'react';
 
 const style = {
   position: 'absolute',
@@ -95,6 +96,10 @@ export default function EditTaskCard({handleClose, open}) {
 
 
   }
+
+  useEffect(()=>{
+
+  },[])
 
   return (
     <div>
