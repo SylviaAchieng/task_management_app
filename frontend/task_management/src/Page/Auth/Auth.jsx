@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import './Auth.css'
 import Signin from './Signin';
+import Signup from './Signup';
 
 const Auth = () => {
 
@@ -15,7 +16,7 @@ const Auth = () => {
         <div className='box lg:max-w-4xl'>
             <div className={`cover ${isRegister?"rotate-active":""}`}>
                 <div className='front'>
-                    <img src="https://cdn.pixabay.com/photo/2020/10/21/18/07/laptop-5673901_1280.jpg" alt="" />
+                    <img src="https://images.pexels.com/photos/1714208/pexels-photo-1714208.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" />
                     <div className='text'>
                         <span className='text-1'>Success is built upon well-organized tasks</span>
                         <span className='text-2 text-xs'>Let's get connected</span>
@@ -29,11 +30,11 @@ const Auth = () => {
                 <div className='form-content h-full'>
 
                     <div className='login-form'>
-                        <Signin/>
+                        <Signin togglePanel={togglePanel}/>
 
                     </div>
                     <div className='signup-form'>
-                        signup
+                        <Signup togglePanel={togglePanel}/>
 
                     </div>
 

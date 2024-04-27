@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
-import TextField from '@mui/material'
-import Button from '@mui/material'
+import Button from '@mui/material/Button';
+import {TextField } from '@mui/material';
 
-const Signin = () => {
+const Signin = ({togglePanel}) => {
     const [formData, setFormData]=useState({
         email:"",
         password:""
@@ -19,7 +19,7 @@ const Signin = () => {
   return (
     <div>
       <h1 className='text-lg font-bold text-center pb-8'>Login</h1>
-      <form onSubmit={handleSubmit}>
+      <form className='space-y-3' onSubmit={handleSubmit}>
         <TextField
         fullWidth
         label="Email"
@@ -49,6 +49,10 @@ const Signin = () => {
             </Button>
         </div>
       </form>
+      <div className='mt-5 flex items-center gap-2 py-5 justify-center'>
+        <span>don't have an account?</span>
+        <Button onClick={togglePanel}>Signup</Button>
+      </div>
     </div>
   )
 }
