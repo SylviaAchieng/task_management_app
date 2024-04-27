@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
 import './Auth.css'
+import Signin from './Signin';
 
 const Auth = () => {
 
-    const [isRegister, setIsRegister]=useState(true);
+    const [isRegister, setIsRegister]=useState(false);
     const togglePanel=()=>{
         setIsRegister(!isRegister)
     }
@@ -28,7 +29,7 @@ const Auth = () => {
                 <div className='form-content h-full'>
 
                     <div className='login-form'>
-                        signin
+                        <Signin/>
 
                     </div>
                     <div className='signup-form'>
