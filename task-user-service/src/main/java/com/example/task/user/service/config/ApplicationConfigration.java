@@ -41,8 +41,13 @@ public class ApplicationConfigration {
             @Override
             public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                 CorsConfiguration cfg=new CorsConfiguration();
-                cfg.setAllowedOrigins(Collections.singletonList("*"));
-                cfg.setAllowedMethods(Collections.singletonList("*"));
+                cfg.setAllowedOrigins(Arrays.asList(
+                        "http://localhost:3000",
+                        "https://task-management-omega-dusky.vercel.app",
+                        "http:localhost:5000"
+
+                ));
+                cfg.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
                 cfg.setAllowCredentials(true);
                 cfg.setAllowedHeaders(Collections.singletonList("*"));
                 cfg.setExposedHeaders(Arrays.asList("Authorization"));

@@ -41,7 +41,7 @@ export const logout = createAsyncThunk("auth/logout", async(userData)=>{
 export const getUserProfile = createAsyncThunk("auth/getUserProfile", async(jwt)=>{
     setAuthHeader(jwt,api)
     try {
-        const {data}=await api.get(`/api/users/profile`)
+        const {data}=await api.post(`/api/users/profile`)
         
         console.log("user profile success", data)
         return data;
