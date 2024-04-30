@@ -11,7 +11,7 @@ export default function TaskList() {
 
   useEffect(()=>{
     dispatch(fetchTasks({}))
-  },[]);
+  },[dispatch]);
 
   console.log("task", task)
 
@@ -20,9 +20,7 @@ export default function TaskList() {
 
         <div className='space-y-3'>
         {
-            task.tasks.map((item)=>(
-            <TaskCard item={item}/>
-          ))
+            [1,1,1,1].map((item)=>(<TaskCard/>))
         }
 
         </div>

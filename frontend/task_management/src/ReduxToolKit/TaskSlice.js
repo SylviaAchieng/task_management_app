@@ -1,7 +1,8 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
-import {api, setAuthHeader} from '../api/api'
+import { setAuthHeader} from '../api/api1'
+import { api } from '../api/api1';
 
-export const fetchTasks=createAsyncThunk("task/fetchTasks",
+export const fetchTasks =createAsyncThunk("task/fetchTasks",
 async({status})=>{
     setAuthHeader(localStorage.getItem("jwt"),api)
 
@@ -101,7 +102,7 @@ async(taskId)=>{
 
     try {
         const {data}=await api.delete(`/api/tasks/${taskId}`);
-        console.log("task delete successfully");
+        console.log("task delete successfully", data);
         return taskId;
     } catch (error) {
         console.log("error", error);

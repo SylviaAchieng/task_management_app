@@ -28,7 +28,7 @@ export const register = createAsyncThunk("auth/register", async(userData)=>{
     }
 })
 
-export const logout = createAsyncThunk("auth/logout", async(userData)=>{
+export const logout = createAsyncThunk("auth/logout", async()=>{
     try {
         localStorage.clear()
         
@@ -37,11 +37,10 @@ export const logout = createAsyncThunk("auth/logout", async(userData)=>{
         throw Error(error.response.data.error)
     }
 });
-
 export const getUserProfile = createAsyncThunk("auth/getUserProfile", async(jwt)=>{
     setAuthHeader(jwt,api)
     try {
-        const {data}=await api.post(`/api/users/profile`)
+        const {data}=await api.get(`/api/users/profile`)
         
         console.log("user profile success", data)
         return data;

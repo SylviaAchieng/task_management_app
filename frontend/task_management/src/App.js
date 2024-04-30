@@ -3,7 +3,6 @@ import { darkTheme } from "./theme/darktheme";
 import Navbar from "./Page/Navbar/Navbar";
 import Home from "./Page/Home/Home";
 import Auth from "./Page/Auth/Auth";
-import { useState } from "react";
 import {useDispatch, useSelector} from 'react-redux'
 import { useEffect } from 'react';
 import { fetchTasks } from './ReduxToolKit/TaskSlice';
@@ -18,7 +17,7 @@ function App() {
   useEffect(() => {
     dispatch(fetchTasks({}));
     dispatch(getUserProfile(auth.jwt || localStorage.getItem("jwt")));
-  }, [auth.jwt]);
+  }, [auth.jwt, dispatch]);
 
   return (
     <ThemeProvider theme={darkTheme}>

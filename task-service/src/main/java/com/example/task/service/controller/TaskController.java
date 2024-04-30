@@ -23,7 +23,7 @@ public class TaskController {
     private UserService userService;
 
     @PostMapping
-    public ResponseEntity<Task> createTask(@RequestAttribute Task task, @RequestHeader("Authorization") String jwt) throws Exception {
+    public ResponseEntity<Task> createTask(@RequestBody Task task, @RequestHeader("Authorization") String jwt) throws Exception {
 
         UserDetail user=userService.getUserProfile(jwt);
 

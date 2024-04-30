@@ -42,10 +42,7 @@ public class ApplicationConfigration {
             public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                 CorsConfiguration cfg=new CorsConfiguration();
                 cfg.setAllowedOrigins(Arrays.asList(
-                        "http://localhost:3000",
-                        "https://task-management-omega-dusky.vercel.app",
-                        "http:localhost:5000"
-
+                        "http://localhost:3000"
                 ));
                 cfg.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
                 cfg.setAllowCredentials(true);
@@ -54,8 +51,11 @@ public class ApplicationConfigration {
                 cfg.setMaxAge(3600L);
                 return cfg;
             }
+
         };
     }
+
+
 
     @Bean
     public PasswordEncoder passwordEncoder(){

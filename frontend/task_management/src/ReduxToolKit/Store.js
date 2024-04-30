@@ -3,7 +3,7 @@ import {thunk} from "redux-thunk";
 import authReducer from './AuthSlice';
 import TaskSlice from './TaskSlice';
 import SubmissionSlice from './SubmissionSlice';
-import AuthSlice from './AuthSlice';
+
 
 const rootReducer = combineReducers({
     auth:authReducer,
