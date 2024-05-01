@@ -1,13 +1,14 @@
-import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
+import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { setAuthHeader} from '../api/api1'
 import { api } from '../api/api1';
+import axios from 'axios';
 
 export const fetchTasks =createAsyncThunk("task/fetchTasks",
 async({status})=>{
     setAuthHeader(localStorage.getItem("jwt"),api)
 
     try {
-        const {data}=await api.get("/api/tasks",{
+        const {data}=await api.get(`http://localhost:5002/api/tasks`,{
             params:{status}
         });
         console.log("fetch tasks : ", data)
@@ -24,7 +25,7 @@ async({status})=>{
     setAuthHeader(localStorage.getItem("jwt"),api)
 
     try {
-        const {data}=await api.get("/api/tasks/user",{
+        const {data}=await api.get(`http://localhost:5002/api/tasks/user`,{
             params:{status}
         });
         console.log("fetch users tasks : ", data);
@@ -41,7 +42,7 @@ async({taskId})=>{
     setAuthHeader(localStorage.getItem("jwt"),api)
 
     try {
-        const {data}=await api.get(`/api/tasks/${taskId}`);
+        const {data}=await api.get(`http://localhost:5002/api/tasks/${taskId}`);
         console.log("fetch tasks by Id: ", data);
         return data;
     } catch (error) {
@@ -56,7 +57,7 @@ async(taskData)=>{
     setAuthHeader(localStorage.getItem("jwt"),api)
 
     try {
-        const {data}=await api.post(`/api/tasks`,taskData);
+        const {data}=await api.post(`http://localhost:5002/api/tasks`,taskData);
         console.log("created task: ", data);
         return data;
     } catch (error) {
@@ -71,7 +72,7 @@ async({id,updatedTaskData})=>{
     setAuthHeader(localStorage.getItem("jwt"),api)
 
     try {
-        const {data}=await api.put(`/api/tasks/${id}`,updatedTaskData);
+        const {data}=await api.put(`http://localhost:5002/api/tasks/${id}`,updatedTaskData);
         console.log("updated task: ", data);
         return data;
     } catch (error) {
@@ -86,7 +87,7 @@ async({taskId, userId})=>{
     setAuthHeader(localStorage.getItem("jwt"),api)
 
     try {
-        const {data}=await api.put(`/api/tasks/${taskId}/user/${userId}/assigned`);
+        const {data}=await api.put(`http://localhost:5002/api/tasks/${taskId}/user/${userId}/assigned`);
         console.log("assigned task: ", data);
         return data;
     } catch (error) {
@@ -101,7 +102,7 @@ async(taskId)=>{
     setAuthHeader(localStorage.getItem("jwt"),api)
 
     try {
-        const {data}=await api.delete(`/api/tasks/${taskId}`);
+        const {data}=await api.delete(`http://localhost:5002/api/tasks/${taskId}`);
         console.log("task delete successfully", data);
         return taskId;
     } catch (error) {

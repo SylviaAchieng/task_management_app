@@ -40,7 +40,7 @@ export const logout = createAsyncThunk("auth/logout", async()=>{
 export const getUserProfile = createAsyncThunk("auth/getUserProfile", async(jwt)=>{
     setAuthHeader(jwt,api)
     try {
-        const {data}=await api.get(`/api/users/profile`)
+        const {data}=await api.get(`http://localhost:5001/api/users/profile`)
         
         console.log("user profile success", data)
         return data;
@@ -54,7 +54,7 @@ export const getUserProfile = createAsyncThunk("auth/getUserProfile", async(jwt)
 export const getUserList = createAsyncThunk("auth/getUserList", async(jwt)=>{
     setAuthHeader(jwt, api)
     try {
-        const {data}=await api.get(`/api/users`)
+        const {data}=await api.get(`http://localhost:5001/api/users`)
         
         console.log("user list success", data)
         return data;
