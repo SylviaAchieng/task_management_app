@@ -71,4 +71,4 @@ const Signin = ({togglePanel}) => {
   )
 }
 
-export default Signin
+export default Signin;

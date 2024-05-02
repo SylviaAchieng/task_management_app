@@ -3,12 +3,17 @@ import {thunk} from "redux-thunk";
 import authReducer from './AuthSlice';
 import TaskSlice from './TaskSlice';
 import SubmissionSlice from './SubmissionSlice';
+import taskReducer from './TaskSlice';
+import submissionReducer from './SubmissionSlice'
 
 
 const rootReducer = combineReducers({
-    auth:authReducer,
-    task:TaskSlice,
-    submission:SubmissionSlice
+    auth: authReducer,
+    //task:TaskSlice,
+    task: taskReducer,
+    //submission: SubmissionSlice
+    submission: submissionReducer
+    
 
 })
 

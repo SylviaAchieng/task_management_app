@@ -87,5 +87,5 @@ const Signup = ({togglePanel}) => {
   )
 }
 
-export default Signup
+export default Signup;
 
