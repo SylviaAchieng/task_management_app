@@ -24,9 +24,9 @@ public class JwtTokenValidator extends OncePerRequestFilter {
     protected void doFilterInternal(HttpServletRequest request,
                                     HttpServletResponse response,
                                     FilterChain filterChain) throws ServletException, IOException {
-        String jwt=request.getHeader(JwtConstant.JWT_HEADER);
+        String jwt = request.getHeader(JwtConstant.JWT_HEADER);
         if (jwt!=null){
-            jwt=jwt.substring(7);
+            jwt = jwt.substring(7);
 
             try {
                 SecretKey key= Keys.hmacShaKeyFor(JwtConstant.SECRET_KEY.getBytes() );
@@ -36,7 +36,7 @@ public class JwtTokenValidator extends OncePerRequestFilter {
                 String authorities=String.valueOf(claims.get("authorities"));
 
                 List<GrantedAuthority> auths = AuthorityUtils.commaSeparatedStringToAuthorityList(authorities);
-                Authentication authentication=new UsernamePasswordAuthenticationToken(email, null,auths);
+                Authentication authentication = new UsernamePasswordAuthenticationToken(email, null,auths);
 
                 SecurityContextHolder.getContext().setAuthentication(authentication);
 

@@ -10,8 +10,9 @@ import { getUserProfile } from "./ReduxToolKit/AuthSlice";
 
 
 function App() {
+  const user=true;
   const dispatch = useDispatch();
-  const {auth} = useSelector(store=>store)
+  const {task, auth} = useSelector(store=>store)
 
   useEffect(() => {
     dispatch(fetchTasks({}));

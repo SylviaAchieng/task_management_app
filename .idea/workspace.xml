@@ -39,11 +39,24 @@
       <change afterPath="$PROJECT_DIR$/frontend/task_management/tailwind.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/task-service/src/main/resources/application.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-user-service/src/main/java/com/example/task/user/service/config/ApplicationConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-user-service/src/main/java/com/example/task/user/service/config/ApplicationConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-user-service/src/main/java/com/example/task/user/service/config/JwtProvider.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-user-service/src/main/java/com/example/task/user/service/config/JwtProvider.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-user-service/src/main/java/com/example/task/user/service/config/JwtTokenValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-user-service/src/main/java/com/example/task/user/service/config/JwtTokenValidator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-user-service/src/main/java/com/example/task/user/service/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-user-service/src/main/java/com/example/task/user/service/controller/AuthController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/task-user-service/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/task-user-service/src/main/resources/application.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -72,7 +85,7 @@
     &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.repository.indices&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.TaskServiceApplication">
+  <component name="RunManager" selected="Application.TaskUserServiceApplication">
     <configuration name="EurekaServerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.eureka.server.EurekaServerApplication" />
       <module name="eureka-server" />
@@ -140,10 +153,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TaskServiceApplication" />
-        <item itemvalue="Application.TaskSubmissionServiceApplication" />
         <item itemvalue="Application.TaskUserServiceApplication" />
         <item itemvalue="Application.GatewayApplication" />
+        <item itemvalue="Application.TaskSubmissionServiceApplication" />
+        <item itemvalue="Application.TaskServiceApplication" />
         <item itemvalue="Application.EurekaServerApplication" />
       </list>
     </recent_temporary>

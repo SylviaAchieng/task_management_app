@@ -22,7 +22,7 @@ public class ApplicationConfiguration {
     @Bean
     SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
         http.sessionManagement(
-                managment->managment.sessionCreationPolicy(
+                management->management.sessionCreationPolicy(
                         SessionCreationPolicy.STATELESS
                 )
         ).authorizeHttpRequests(
@@ -41,10 +41,8 @@ public class ApplicationConfiguration {
             @Override
             public CorsConfiguration getCorsConfiguration(HttpServletRequest request) {
                 CorsConfiguration cfg=new CorsConfiguration();
-                cfg.setAllowedOrigins(Arrays.asList(
-                        "http://localhost:3000"
-                ));
-                cfg.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE"));
+                cfg.setAllowedOrigins(Arrays.asList("http://localhost:3000"));
+                cfg.setAllowedMethods(Collections.singletonList("*"));
                 cfg.setAllowCredentials(true);
                 cfg.setAllowedHeaders(Collections.singletonList("*"));
                 cfg.setExposedHeaders(Arrays.asList("Authorization"));

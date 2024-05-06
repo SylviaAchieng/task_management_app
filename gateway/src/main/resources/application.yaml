@@ -27,12 +27,12 @@ spring:
               - path=/api/submissions/**, /submissions/**
 
         default-filters:
-          - DedupeResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
-        globalcors:
+          - DeduceResponseHeader=Access-Control-Allow-Credentials Access-Control-Allow-Origin
+        global-cors:
           cors-configurations:
             '[/**]':
-              allowedOrigins: "http://localhost:3000"
-              allowedMethods: "GET,POST,DELETE,PUT"
+              allowedOrigins: "*"
+              allowedMethods: "*"
               allowedHeaders: "*"
 
 

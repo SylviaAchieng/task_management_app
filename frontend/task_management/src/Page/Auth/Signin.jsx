@@ -3,7 +3,7 @@ import { useState } from 'react'
 import Button from '@mui/material/Button';
 import {TextField } from '@mui/material';
 import { useDispatch, useSelector } from 'react-redux';
-import { login } from '../../ReduxToolKit/AuthSlice';
+import { getUserProfile, login } from '../../ReduxToolKit/AuthSlice';
 import Home from '../Home/Home';
 
 const Signin = ({togglePanel}) => {
@@ -22,6 +22,7 @@ const Signin = ({togglePanel}) => {
   const handleSubmit=(e)=>{
       e.preventDefault();
       dispatch(login(formData))
+      dispatch(getUserProfile(localStorage.getItem("jwt")))
       console.log("login success")
       console.log("login form", formData)
   }

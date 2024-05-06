@@ -88,6 +88,7 @@ public class AuthController {
         return new ResponseEntity<>(authResponse, HttpStatus.OK);
 
     }
+    @GetMapping("/api/users/profile")
     private Authentication authenticate(String username, String password){
         UserDetails userDetails = customUserDetails.loadUserByUsername(username);
 
