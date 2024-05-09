@@ -20,7 +20,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RequestMapping("/auth")
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+
 public class AuthController {
     @Autowired
     private UserRepository userRepository;

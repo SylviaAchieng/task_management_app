@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/submission")
+@RequestMapping("/api/submissions")
 public class SubmissionController {
 
     @Autowired

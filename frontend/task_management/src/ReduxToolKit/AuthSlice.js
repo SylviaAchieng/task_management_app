@@ -4,7 +4,7 @@ import { BASE_URL, api, setAuthHeader } from "../api/api";
 
 export const login = createAsyncThunk("auth/login", async(userData)=>{
     try {
-        const {data}=await axios.post(`${BASE_URL}/auth/signin`, userData)
+        const {data}=await axios.post(`http://localhost:5001/auth/signin`, userData)
         localStorage.setItem("jwt",data.jwt);
         console.log("login success", data);
         return data;
@@ -17,7 +17,7 @@ export const login = createAsyncThunk("auth/login", async(userData)=>{
 
 export const register = createAsyncThunk("auth/register", async(userData)=>{
     try {
-        const {data}=await axios.post(`${BASE_URL}/auth/signup`, userData)
+        const {data}=await axios.post(`http://localhost:5001/auth/signup`, userData)
         localStorage.setItem("jwt",data.jwt);
         console.log("register success", data);
         return data;
@@ -41,7 +41,7 @@ export const getUserProfile = createAsyncThunk(
     "auth/getUserProfile", async(jwt) => {
     setAuthHeader(jwt,api)
     try {
-        const {data}=await api.get(`/api/users/profile`)
+        const {data}=await api.get(`http://localhost:5001/api/users/profile`)
         
         console.log("user profile success", data.jwt)
         return data;
@@ -55,7 +55,7 @@ export const getUserProfile = createAsyncThunk(
 export const getUserList = createAsyncThunk("auth/getUserList", async(jwt)=>{
     setAuthHeader(jwt, api)
     try {
-        const {data}=await api.get(`/api/users`)
+        const {data}=await api.get(`http://localhost:5001/api/users`)
         
         console.log("user list success", data)
         return data;

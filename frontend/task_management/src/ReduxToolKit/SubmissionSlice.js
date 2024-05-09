@@ -7,7 +7,7 @@ async({taskId, githubLink})=>{
 
     try {
         const {data} = await api.post(
-            `/api/submissions?task_id=${taskId}&github_link=${githubLink}`,
+            `http://localhost:5003/api/submissions?task_id=${taskId}&github_link=${githubLink}`,
             {}
         );
         console.log("submited task", data);
@@ -25,7 +25,7 @@ async()=>{
 
     try {
         const {data} = await api.get(
-            `/api/submissions`,
+            `http://localhost:5003/api/submissions`,
             {}
         );
         console.log("submited task", data);
@@ -43,7 +43,7 @@ async(taskId)=>{
 
     try {
         const {data} = await api.get(
-            `/api/submissions/task/${taskId}`,
+            `http://localhost:5003/api/submissions/task/${taskId}`,
             {}
         );
         console.log("submited task", data);
@@ -61,7 +61,7 @@ async({id, status})=>{
 
     try {
         const {data} = await api.put(
-            `/api/submissions/${id}?status=${status}`,
+            `http://localhost:5003/api/submissions/${id}?status=${status}`,
             {}
         );
         console.log("accept task", data);
