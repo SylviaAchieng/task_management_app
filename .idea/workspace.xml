@@ -38,9 +38,7 @@
       <change afterPath="$PROJECT_DIR$/frontend/task_management/src/theme/darktheme.jsx" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/frontend/task_management/tailwind.config.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gateway/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/gateway/src/main/resources/application.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/task-submission-service/src/main/java/com/example/task/submission/service/controller/SubmissionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-submission-service/src/main/java/com/example/task/submission/service/controller/SubmissionController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/task-user-service/src/main/java/com/example/task/user/service/controller/AuthController.java" beforeDir="false" afterPath="$PROJECT_DIR$/task-user-service/src/main/java/com/example/task/user/service/controller/AuthController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

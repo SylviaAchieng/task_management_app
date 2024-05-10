@@ -24,7 +24,7 @@ async({status})=>{
     setAuthHeader(localStorage.getItem("jwt"),api)
 
     try {
-        const {data}=await api.get(`/api/tasks/user`,{
+        const {data}=await api.get(`http://localhost:5002/api/tasks/user`,{
             params:{status}
         });
         console.log("fetch users tasks : ", data);

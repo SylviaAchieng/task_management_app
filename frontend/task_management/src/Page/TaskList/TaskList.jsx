@@ -13,9 +13,8 @@ export default function TaskList() {
   const filterValue = queryParams.get("filter");
 
   useEffect(()=>{
-    if(auth)
     dispatch(fetchTasks({status:filterValue}))
-  },[filterValue]);
+  },[filterValue, dispatch]);
 
   console.log("task", task)
 

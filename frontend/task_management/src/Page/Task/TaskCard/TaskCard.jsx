@@ -71,7 +71,8 @@ export default function TaskCard({item}) {
 
                 <div className='flex flex-wrap gap-2 items-center'>
 
-                    {item.tags.map((item) => ( <span className='py-1 px-5 rounded-full techStack'>
+                    {item.tags.map((item) => ( 
+                    <span className='py-1 px-5 rounded-full techStack'>
                         {item}
                     </span> ))}
 

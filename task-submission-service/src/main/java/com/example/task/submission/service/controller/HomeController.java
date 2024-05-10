@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HomeController {
 
-    @GetMapping("/submission")
+    @GetMapping("/submissions")
     public ResponseEntity<String> homeController(){
 
         return new ResponseEntity<>("welcome to submission service", HttpStatus.OK);
