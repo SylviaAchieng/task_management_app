@@ -5,7 +5,6 @@ import { BASE_URL, api, setAuthHeader } from "../api/api";
 export const login = createAsyncThunk("auth/login", async(userData)=>{
     try {
         const {data}=await axios.post(`http://localhost:5001/auth/signin`, userData)
-        localStorage.setItem("jwt",data.jwt);
         console.log("login success", data);
         return data;
         
@@ -18,7 +17,6 @@ export const login = createAsyncThunk("auth/login", async(userData)=>{
 export const register = createAsyncThunk("auth/register", async(userData)=>{
     try {
         const {data}=await axios.post(`http://localhost:5001/auth/signup`, userData)
-        localStorage.setItem("jwt",data.jwt);
         console.log("register success", data);
         return data;
         
