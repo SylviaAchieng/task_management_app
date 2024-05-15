@@ -13,6 +13,7 @@ public class UserServiceImplementation implements UserService {
 
     @Autowired
     private UserRepository userRepository;
+//    private final UserRepository userRepository;
     @Override
     public User getUserProfile(String jwt) {
         String email= JwtProvider.getEmailFromJwtToken(jwt);
@@ -23,4 +24,5 @@ public class UserServiceImplementation implements UserService {
     public List<User> getAllUsers() {
         return userRepository.findAll();
     }
+
 }
